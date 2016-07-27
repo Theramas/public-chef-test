@@ -6,7 +6,12 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-file "/tmp/success.txt" do
-  action  :create
-  content  "Test run was successful"
+bash 'script' do
+  code <<-EOH
+    #!/bin/bash
+    for i in (10); do
+        sleep 1m
+        echo "test"
+    done
+    EOH
 end
