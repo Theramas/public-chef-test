@@ -9,11 +9,12 @@
 bash 'script_test_it_yo' do
   code <<-EOH
     #!/bin/bash 
-    COUNTER=20
+    COUNTER=5
     until [  $COUNTER -lt 1 ]; do
       echo COUNTER $COUNTER
       let COUNTER-=1
       sleep 1m
     done
+    exit 1
   EOH
 end
