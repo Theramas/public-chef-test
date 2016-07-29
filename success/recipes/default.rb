@@ -9,7 +9,7 @@
 bash 'script_test_it_yo' do
   code <<-EOH
     #!/bin/bash 
-    COUNTER=60
+    COUNTER=20
     until [  $COUNTER -lt 1 ]; do
       echo COUNTER $COUNTER
       let COUNTER-=1
@@ -17,3 +17,4 @@ bash 'script_test_it_yo' do
     done
   EOH
 end
+raise "The End"
