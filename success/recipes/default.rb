@@ -6,12 +6,13 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-bash 'script' do
+bash 'script_test_it_yo' do
   code <<-EOH
     #!/bin/bash
-    for i in (10) do
-        sleep 1m
+    for i in [1, 2, 3, 4, 5, 6] do
+        sleep 2m
         echo "test"
     done
     EOH
 end
+raise "The final error"
