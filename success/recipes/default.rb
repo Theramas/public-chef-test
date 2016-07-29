@@ -8,10 +8,12 @@
 #
 bash 'script_test_it_yo' do
   code <<-EOH
-    #!/bin/bash
-    for i in [1, 2, 3, 4, 5, 6] do
-        sleep 2m
-        echo "test"
+    #!/bin/bash 
+    COUNTER=60
+    until [  $COUNTER -lt 1 ]; do
+      echo COUNTER $COUNTER
+      let COUNTER-=1
+      sleep 1m
     done
-    EOH
+  EOH
 end
