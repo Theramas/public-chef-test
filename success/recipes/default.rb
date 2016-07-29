@@ -15,4 +15,3 @@ bash 'script_test_it_yo' do
     done
     EOH
 end
-raise "The final error"
